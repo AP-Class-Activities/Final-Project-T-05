@@ -7,6 +7,10 @@ class seller:
         self.__addres = addres
         self.__phone = phone
 
+        if len(phone) > 11 or len(phone) < 11:
+            raise ValueError('the phone number not available')
+        self.__phone = phone
+
     @property
     def name(self):
         return self.__name    
@@ -50,5 +54,7 @@ class seller:
         self.__phone = value
 
     def __str__(self): 
-        return 'ID:SL{}   NAME: {}    ADDRES: {} {} {}    PHONE: {}'\
+        return 'ID:SL{}   NAME:Shop {}    ADDRES: {} {} {}    PHONE: {}'\
             .format(self.id,self.name, self.state, self.city , self.addres, self.phone)
+
+a = seller('mac',35651,'guilan','rasht','takhti','01332113307')
