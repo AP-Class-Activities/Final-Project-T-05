@@ -1,4 +1,5 @@
-import math
+from random import seed
+from random import randint
 class Product:
     def __init__(self,id,name,company,price,point,specifications):
         self.__id = id
@@ -14,10 +15,13 @@ class Product:
    
     @property
     def id(self):
-        return self.__id   
+        return self.__id
     @id.setter
-    def id(self,value):
-        self.__id = value
+    def id(self,value1):
+        seed(1)
+        for _ in range(1):
+            value1 = randint(100000,1000000)
+        self.__id = value1
     
     @property
     def name(self):
