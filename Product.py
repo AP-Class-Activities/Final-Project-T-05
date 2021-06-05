@@ -56,11 +56,13 @@ class Product:
         self.__specifications = value
     
     def __str__(self):
-        return 'ID: {} NAME: {} COMPANY: {} PRICE: {} POINT: {} SPECIFICATIONS: {}'\
+        return 'ID:PR{}   NAME_PRODUCT: {}    COMPANY: {}   PRICE: {}Toman   POINT: {}   SPECIFICATIONS: {}'\
             .format(self.id,self.name,self.company,self.price,self.point,self.specifications)
 
+'''
+
+c = Product('563258','khorma','golestan',1700,3,'baste bandi ziba')
+print(c)
 
 
-
-
-    
+''' 

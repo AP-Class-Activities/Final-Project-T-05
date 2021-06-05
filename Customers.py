@@ -134,6 +134,7 @@ class Customers:
         return 'ID: {}   name: {} {}    Birthday_date: {}/{}/{}   sex: {}   addres: {} {} {}    phone: {}  postal_code: {}'\
             .format(self.id,self.name, self.family, self.year, self.mounth, self.day, self.sex, self.state, self.city , self.addres, self.phone , self.postal_code)
 
-
+'''
 a =Customers('amir' , 'hesam' , 1376 , 10 , 30 , '35628462' , 'male' , 'guilan' , 'rasht' , 'golsar' , '09112563556' , '235116')
 print(a)
+'''
