@@ -1,3 +1,5 @@
+from random import seed
+from random import randint
 class seller:
     def __init__(self, name , id , state , city , addres , phone):
         self.__name = name
@@ -22,8 +24,11 @@ class seller:
     def id(self):
         return self.__id
     @id.setter
-    def id(self,value):
-        self.__id = value
+    def id(self,value1):
+        seed(1)
+        for _ in range(1):
+            value1 = randint(100000,1000000)
+        self.__id = value1
     
     @property
     def state(self):
@@ -57,4 +62,5 @@ class seller:
         return 'ID:SL{}   NAME:Shop {}    ADDRES: {} {} {}    PHONE: {}'\
             .format(self.id,self.name, self.state, self.city , self.addres, self.phone)
 
-a = seller('mac',35651,'guilan','rasht','takhti','01332113307')
+a = seller('mac',randint(100000,1000000),'guilan','rasht','takhti','01332113307')
+print(a)

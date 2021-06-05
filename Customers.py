@@ -1,7 +1,7 @@
-from Product import Product
-
+from random import seed
+from random import randint
 class Customers:
-    def __init__(self, name , family , birthday_year , birthday_mounth , birthday_day , id , sex , state , city , addres , phone , postal_code , wallet):
+    def __init__(self, name , family , birthday_year , birthday_mounth , birthday_day , id , sex , state , city , addres , phone , postal_code):
         self.__name = name
         self.__family = family
         self.__year = birthday_year
@@ -14,7 +14,6 @@ class Customers:
         self.__addres = addres
         self.__phone = phone
         self.__postalcode = postal_code
-        self.__wallet = wallet
 
         if birthday_year > 1400 or birthday_year < 1300: 
             raise ValueError('the year for a student should be in rnage 1395 ... 1400')
@@ -31,17 +30,10 @@ class Customers:
         if sex not in ['male', 'female']: 
             raise ValueError('the value of sex should be [male or female] ')
         self.__sex = sex
-
-        if len(id) > 10:
-            raise ValueError('the id numbers not available')
-        self.__id = id
         
-        if len(phone) > 11:
+        if len(phone) > 11 or len(phone) < 11:
             raise ValueError('the phone number not available')
         self.__phone = phone
-
-        if wallet < 
-
 
     @property
     def name(self):
@@ -88,8 +80,11 @@ class Customers:
     def id(self):
         return self.__id
     @id.setter
-    def id(self,value):
-        self.__id = value
+    def id(self,value1):
+        seed(1)
+        for _ in range(1):
+            value1 = randint(100000,1000000)
+        self.__id = value1
     
     @property
     def sex(self): 
@@ -136,12 +131,11 @@ class Customers:
         self.__postalcode = value
 
     def __str__(self): 
-        return 'ID: {}   name: {} {}    Birthday_date: {}/{}/{}   sex: {}   addres: {} {} {}    phone: {}  postal_code: {}'\
+        return 'ID:CU{}   name: {} {}    Birthday_date: {}/{}/{}   sex: {}   addres: {} {} {}    phone: {}  postal_code: {}'\
             .format(self.id,self.name, self.family, self.year, self.mounth, self.day, self.sex, self.state, self.city , self.addres, self.phone , self.postal_code)
 
-'''
 
-a =Customers('amir' , 'hesam' , 1376 , 10 , 30 , '35628462' , 'male' , 'guilan' , 'rasht' , 'golsar' , '09112563556' , '235116')
+
+a =Customers('amir' , 'hesam' , 1376 , 10 , 30 , randint(100000,1000000) , 'male' , 'guilan' , 'rasht' , 'golsar' , '09113356268' , '235116')
 print(a)
 
-'''
