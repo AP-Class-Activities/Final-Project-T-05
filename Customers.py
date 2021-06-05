@@ -134,8 +134,9 @@ class Customers:
         return 'ID:CU{}   name: {} {}    Birthday_date: {}/{}/{}   sex: {}   addres: {} {} {}    phone: {}  postal_code: {}'\
             .format(self.id,self.name, self.family, self.year, self.mounth, self.day, self.sex, self.state, self.city , self.addres, self.phone , self.postal_code)
 
-
+'''
 
 a =Customers('amir' , 'hesam' , 1376 , 10 , 30 , randint(100000,1000000) , 'male' , 'guilan' , 'rasht' , 'golsar' , '09113356268' , '235116')
 print(a)
 
+'''
