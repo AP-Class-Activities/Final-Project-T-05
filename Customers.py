@@ -1,5 +1,7 @@
+from Product import Product
+
 class Customers:
-    def __init__(self, name , family , birthday_year , birthday_mounth , birthday_day , id , sex , state , city , addres , phone , postal_code):
+    def __init__(self, name , family , birthday_year , birthday_mounth , birthday_day , id , sex , state , city , addres , phone , postal_code , wallet):
         self.__name = name
         self.__family = family
         self.__year = birthday_year
@@ -12,6 +14,7 @@ class Customers:
         self.__addres = addres
         self.__phone = phone
         self.__postalcode = postal_code
+        self.__wallet = wallet
 
         if birthday_year > 1400 or birthday_year < 1300: 
             raise ValueError('the year for a student should be in rnage 1395 ... 1400')
@@ -36,6 +39,8 @@ class Customers:
         if len(phone) > 11:
             raise ValueError('the phone number not available')
         self.__phone = phone
+
+        if wallet < 
 
 
     @property
@@ -135,6 +140,8 @@ class Customers:
             .format(self.id,self.name, self.family, self.year, self.mounth, self.day, self.sex, self.state, self.city , self.addres, self.phone , self.postal_code)
 
 '''
+
 a =Customers('amir' , 'hesam' , 1376 , 10 , 30 , '35628462' , 'male' , 'guilan' , 'rasht' , 'golsar' , '09112563556' , '235116')
 print(a)
+
 '''
