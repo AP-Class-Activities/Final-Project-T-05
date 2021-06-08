@@ -13,7 +13,7 @@ class Product:
         if point > 5 or point < 0:
             raise ValueError('the Product price should be in range 0 ... 5')
         self.__point = point
-        
+
         if avalible == 0:
             raise ValueError('the product is empty')
         self.__avalible = avalible
@@ -81,3 +81,4 @@ c = Product(randint(100000,1000000),'khorma','golestan',1700,3,'baste bandi ziba
 print(c)
 
 '''
+
